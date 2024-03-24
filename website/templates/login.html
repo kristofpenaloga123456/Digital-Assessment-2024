@@ -1,0 +1,70 @@
+{% extends "template.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Add your CSS links here if needed -->
+    <style>
+        /* CSS for the fading popup */
+        .popup {
+            /* Your styles here */
+            display: none; /* Initially hide the popup */
+        }
+    </style>
+</head>
+<body>
+    <!-- Your existing login form content here -->
+    <form method="POST">
+        <h3 align="center">Sign Up</h3>
+        <div class="form-group">
+            <label for="Email">Email Address</label>
+            <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="Enter Email"
+            />
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input
+                type="password"
+                class="form-control"
+                id="password"
+                name="password"
+                placeholder="Enter Password"
+            />
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <!-- Fading welcome popup -->
+    <div id="welcomePopup" class="popup">
+        <p>Welcome to our website!</p>
+    </div>
+
+    <!-- Add JavaScript to handle fading effect -->
+    <script>
+        // JavaScript for fading effect
+        window.onload = function() {
+            var popup = document.getElementById('welcomePopup');
+            popup.style.display = 'block';
+            setTimeout(function() {
+                popup.style.opacity = '0';
+                setTimeout(function() {
+                    popup.style.display = 'none';
+                }, 1000); // Fading duration
+            }, 3000); // Time before fading starts (in milliseconds)
+        };
+    </script>
+</body>
+</html>
+{% endblock %}
