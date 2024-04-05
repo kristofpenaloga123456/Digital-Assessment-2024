@@ -64,69 +64,6 @@
     </div>
 
 
-{% block custom_css %}
-<style>
-    /* CSS Styles */
-    .welcome-popup {
-        display: none;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: rgba(0, 0, 0, 0.5); /* Grey transparent background */
-        padding: 20px;
-        border-radius: 10px;
-        color: #fff;
-        text-align: center;
-        z-index: 9999;
-    }
-
-    .popup-content {
-        /* Additional styles for popup content if needed */
-    }
-</style>
-{% endblock %}
-
-{% block custom_script %}
-<script>
-    // JavaScript for Welcome Pop-up
-    document.addEventListener("DOMContentLoaded", function() {
-        var popup = document.getElementById('welcomePopup');
-
-        // Show pop-up
-        setTimeout(function() {
-            popup.style.display = 'block';
-            fadeIn(popup);
-        }, 2000); // Adjust delay time as needed
-
-        // Close pop-up
-        setTimeout(function() {
-            fadeOut(popup);
-        }, 6000); // Adjust delay time as needed
-
-        // Fade in function
-        function fadeIn(element) {
-            var opacity = 0;
-            var timer = setInterval(function() {
-                if (opacity >= 1) {
-                    clearInterval(timer);
-                }
-                element.style.opacity = opacity;
-                opacity += 0.1;
-            }, 50); // Adjust fade-in speed as needed
-        }
-
-        // Fade out function
-        function fadeOut(element) {
-            var opacity = 1;
-            var timer = setInterval(function() {
-                if (opacity <= 0.1) {
-                    clearInterval(timer);
-                    element.style.display = 'none';
-                }
-                element.style.opacity = opacity;
-                opacity -= 0.1;
-            }, 50); // Adjust fade-out speed as needed
         }
     });
 </script>
