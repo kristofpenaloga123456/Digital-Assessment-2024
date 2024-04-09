@@ -1,19 +1,6 @@
-{% extends "template.html"  %}
-{% block title %} Home {% endblock  %}
+{% extends "template.html" %}
+{% block title %} Home {% endblock %}
 {% block content %}
-         <!-- Content section 1-->
-         <section id="scroll">
-            <div class="container px-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-lg-6 order-lg-2">
-                        <div class="p-5"><img class="img-fluid rounded-circle" src="static/assets/img/01.jpg" alt="..." /></div>
-                    </div>
-                    <div class="col-lg-6 order-lg-1">
-                        <div class="p-5">
-                            <h2 class="display-4">For those about to rock...</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
-                        </div>
-                    </div>
     <!-- Welcome Modal -->
     <div class="modal fade" id="welcomeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -28,53 +15,68 @@
                     <p class="text-white">Welcome to our volleyball website! We hope you have an amazing experience.</p>
                 </div>
             </div>
-        </section>
-        <!-- Content section 2-->
-        <section>
-            <div class="container px-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-lg-6">
-                        <div class="p-5"><img class="img-fluid rounded-circle" src="static/assets/img/02.jpg" alt="..." /></div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="p-5">
-                            <h2 class="display-4">We salute you!</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Content section 3-->
-        <section>
-            <div class="container px-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-lg-6 order-lg-2">
-                        <div class="p-5"><img class="img-fluid rounded-circle" src="static/assets/img/03.jpg" alt="..." /></div>
-                    </div>
-                    <div class="col-lg-6 order-lg-1">
-                        <div class="p-5">
-                            <h2 class="display-4">Let there be rock!</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-
-   <!-- Your existing content sections here -->
-
-    <!-- Welcome Pop-up -->
-    <div id="welcomePopup" class="welcome-popup">
-        <div class="popup-content">
-            <h2>Welcome to Our Volleyball Website!</h2>
-            <p>We have everything you need for volleyball enthusiasts. Explore our site and enjoy!</p>
         </div>
     </div>
 
+    <!-- Content section 1-->
+    <section id="scroll">
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="p-5"><img class="img-fluid rounded-circle" src="static/assets/img/volleyball1.jpg" alt="..." /></div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="p-5">
+                        <h2 class="display-4">Welcome to Sancta Maria Volleyball!</h2>
+                        <p>Where you can train and play, and perfect your volleyball skills! We welcome all volleyball lovers regardless of ethnicity, and background </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content section 2-->
+    <section>
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6">
+                    <div class="p-5"><img class="img-fluid rounded-circle" src="static/assets/img/02.jpg" alt="..." /></div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="p-5">
+                        <h2 class="display-4">We salute you!</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content section 3-->
+    <section>
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="p-5"><img class="img-fluid rounded-circle" src="static/assets/img/03.jpg" alt="..." /></div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="p-5">
+                        <h2 class="display-4">Let there be rock!</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript to trigger the popup message -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#welcomeModal').modal('show');
+        });
+    </script>
 
     <!-- CSS to make modal content transparent grey -->
     <style>
@@ -82,6 +84,5 @@
             background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value to change transparency */
             border: none; /* Remove border if needed */
         }
-    });
-</script>
-{% endblock %}{% endblock %}
+    </style>
+{% endblock %}
