@@ -69,3 +69,10 @@
 #popupMessage .close:hover {
     opacity: 1;
 }
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0; /* Added to align with the left side of the page */
+}
